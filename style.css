@@ -1,0 +1,806 @@
+/* 
+:root {
+    --primary: 
+} */
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    /* font-family: Arial, sans-serif; */
+}
+
+.video-container{
+    width: 100%;
+}
+
+.sectionall{
+    width: 100%;
+    height: auto;
+}
+
+/* home page */
+#style {
+    position: relative;
+    top: 8px;
+    display: inline-block;
+    white-space: nowrap; /* Prevents text from wrapping to next line */
+    overflow: hidden; /* Hides the word before it is "typed" */
+    border-right: 2px solid black; /* Creates the blinking cursor */
+    animation: typing 4.5s steps(10) infinite; /* Typing effect for a 6-letter word */
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0; /* Starts with no letters visible */
+    }
+    to {
+        width: 28ch; /* Reveals 6 characters (adjust according to word length) */
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    100% {
+        border-color: rgb(136, 61, 61);
+    }
+}
+
+#text{
+    position: absolute;
+    bottom: 15rem;
+    left: 20rem;
+    color: white;
+    font-size: 50px;
+}
+
+#quoteDiv{
+    position: relative;
+    width: 40rem;
+    bottom: 30rem;
+    left: 20rem;
+    color: white;
+}
+
+#quote{
+    font-size: 30px;
+}
+
+#touch{
+    background-color: blueviolet;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    padding: 5px;
+}
+#touch:hover{
+    transform: scale(1.1);
+    background-color: rgb(26, 74, 70);
+    border-radius: 10px;
+}
+
+@media (max-width:351px) {
+    #homeImage{
+        width: 100%;
+    }
+    #text{
+        position: relative;
+        left: 5rem;
+        color: white;
+        font-size: 15px;
+    }
+    #quoteDiv{
+        position: relative;
+        width: 10rem;
+        bottom: 9rem;
+        left: 4rem;
+        color: white;
+    }
+    #quote{
+        font-size: 9px;
+    }
+    #touch {
+        background-color: blueviolet;
+        width: 35px;
+        height: 6px;
+        cursor: pointer;
+        font-size: 9px;
+    }
+    #more{
+        font-size: 6px;
+    }
+    
+    
+}
+
+.image{
+    margin: 10px;
+    width: 12.9rem;
+    height: 10rem;
+}
+
+.image:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+ #showphoto {
+    background-color: rgb(126, 117, 117);
+    width: 100%; /* Full width of the viewport */
+    overflow: hidden; /* Hides images when they move outside the viewport */
+    white-space: nowrap; /* Prevents the images from wrapping to the next line */
+    box-sizing: border-box;
+    position: absolute;
+    height: 200px; /* Adjust the height according to your image size */
+    top: 800px;
+}
+
+#photomove {
+    display: inline-block;
+    animation: scroll 40s linear infinite; /* Adjust the duration to control speed */
+}
+
+#photomove #image {
+    height: 100%; /* Adjust image height to fit the container */
+    width: auto; /* Maintain aspect ratio */
+    padding-top: 40px; /* Add spacing between images */
+}
+
+/* Define the animation for the scrolling effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(0deg); /* Start just outside the right edge */
+    }
+    100% {
+        transform: translateX(-100%); /* Move all the way to the left side */
+    }
+} 
+
+#port{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    top: 100px;
+    background-color:#ddd ;
+}
+
+#every .imagecollection{
+    padding: 10px;
+}
+
+.imagecollection{
+    width: 290px;
+    height: 190px;
+}
+
+.check{
+    font-size: 20px;
+    padding: 20px;
+    font-family:cursive;
+}
+
+#carouseldiv{
+    padding: 100px;
+}
+
+#extra{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    top: 5px;
+    left: 580px;
+}
+
+#collection{
+    width: 100%;
+    position: relative;
+    top: 100px;
+    background-color: #ddd;
+    display: flex;
+}
+
+#collection h3{
+    padding-inline: 100px;
+}
+
+h3{
+    padding: 10px;
+}
+
+.inner img{
+    width: 200px;
+    height: 200px;
+    padding-inline: 100px;
+}
+
+.sub{
+    font-size: 20px;
+    font-family: cursive;
+    padding: 20px;
+}
+
+about page
+/* #about{
+    width: 100%;
+    height: 350vh;
+}
+
+.title{
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    left: 100px;
+    
+}
+
+.title{
+    width: 100%;
+    height: 50vh;
+    background-image: url('./images/about_us.jpg');
+    position: absolute;
+    left: -0px;
+    color: white;
+}
+#us{
+    position: relative;
+    left: 85vh;
+    margin: 50px;
+}
+.content{
+    position: relative;
+    top: 40vh;
+}
+section {
+    max-width: 100px; 
+    margin: 0 auto;
+    padding: 20px;
+} */
+
+/* .section{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ddd;
+}
+
+.container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.content-section{
+    float: left;
+    width: 50%;
+}
+
+.image-section{
+    float: right;
+    width: 35%;
+    border-radius: 5px;
+    position: relative;
+    top: 250px;
+   
+}
+
+.image-section img{
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 50px;
+    border-radius: 5px;
+}
+
+.content-section .title{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.content-section .content h3{
+    margin-top: 20px;
+    color: #413e3e;
+    font-size: 25px;
+}
+
+.content-section .content p{
+    margin-top: 10px;
+    font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: justify;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* Vision section */
+
+/* .section1{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ddd;
+}
+
+.container1{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.content-section1{
+    float: right;
+    width: 55%;
+}
+
+.image-section1{
+    float: left;
+    width: 35%;
+    
+}
+
+.image-section1 img{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    bottom: 0px;
+    border-radius: 5px;
+    
+}
+
+.content-section1 .content1 h3{
+    margin-top: 10px;
+    color: #333232;
+    font-size: 25px;
+}
+
+.content-section1 .content1 p{
+    margin-top: 5px;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: justify;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+#mainc{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 80px;
+    margin: 0;
+    background: #ddd;
+    font-family: "Merriweather";
+}
+
+
+}
+
+.circle{
+    position: absolute;
+    background: var(--color);
+    height: 380px;
+    width: 380px;
+    top: 210px;
+    left: 10px;
+    border-radius: 50%;
+}
+
+.person img{
+    position: relative;
+    width: 600px;
+    top: 60px;
+    right: 110px;
+    transform: translate(20px) scale(1.15);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.container-inner{
+        position: relative;
+        clip-path: path("M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z");
+        top: -200px;
+}
+
+.divider{
+    height: 3px;
+    width: 130px;
+    border-radius: 5px;
+    background: var(--color);
+} */
+
+/* ./
+#vision{
+    position: relative;
+    top: 15px;
+}
+
+#mission1:hover{
+    transform: scale(1.1);
+}
+
+#vision1:hover{
+    transform: scale(1.1);
+}
+
+/* service page */
+#service{
+    width: 100%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('./images/servese.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+#our{
+    background-image: url('./images/servicesimage.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    padding: 100px;
+    font-size: 80px;
+    color: rgb(240, 236, 236);
+    padding-left: 600px;
+}
+
+
+
+.div{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    /* height: 300px; */
+    width: 600px;
+    /* display: flex; */
+    justify-content: center; */
+    align-items: center;
+    background-color: rgb(207, 123, 49);
+    /* background:linear-gradient(45deg, blue, red); */
+    color: whitesmoke;
+    margin: 100px 0;
+    border-radius: 7px;
+    box-shadow: 0px 0px 20px gray;
+    padding: 50px;
+}
+
+h2{
+    text-align: center;
+}
+
+.points{
+    padding-left: 20px;
+}
+
+#huge{
+    width: 100px;
+    height: 40px;
+    background-color: #5d5d5d;
+    position: relative;
+    left: 210px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#huge:hover{
+    transform: scale(1.1);
+    background-color:rgb(84, 32, 75);
+    border-radius: 10px;
+}
+
+/* contact */
+#contact{
+    width: 100%;
+    height: 200vh;
+}
+#one{
+    /* text-align: center; */
+    width:100%;
+    background-color: #b63b3b;
+    
+}
+
+/* #par{
+    height: 200px;
+    width:400px;
+    border-radius: 5px;
+    text-align: center;
+    bottom: 90px;
+} */
+
+#submit:hover{
+    background-color:dimgray;
+}
+#map{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0px;
+}
+iframe{
+    /* position: absolute;
+    bottom: 0px; */
+    box-sizing: border-box;
+    width: 100%;
+    height: 350px;
+    margin-top: 20px;
+    position:relative;
+    bottom: 450px;
+}
+input{
+    position: relative;
+    left:600px;
+    position: relative;
+    bottom: 90px;
+}
+#submit{
+    width: 600px;
+    position:relative;
+    left: 600px;
+    height: 50px;
+    border-radius: 5px ;
+    bottom: 90px;
+    
+}
+.been{
+    width: 600px;
+    height: 50px;
+    border-radius: 5px;
+    text-align:center; 
+}
+#textbox{
+    width: 600px;
+    height: 200px;
+}
+#pchhetri{
+    width: 600px;
+    height: 200vh;
+    position: relative;
+    top: 100px;
+    left: 0px;
+   
+}
+
+.h2{
+    font-size: 30px;
+    position:relative;
+    right: 30rem;
+    bottom: 50px;
+}
+#chhetri {
+    position: relative;
+    left: 400px;
+    bottom: 130px;
+}
+#aaa{
+    width: 200px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column; 
+    position: absolute; 
+    right: 30rem;
+}
+p{
+font-size: 24px;
+}
+
+/* footer */
+.footer{
+    background-color: #333;
+}
+
+.sameheader{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+.sameheader h4{
+    display: inline-block;
+    font-size: 25px;
+    padding-inline: 75px;
+    color: rgb(8, 246, 234);
+    
+   
+}
+
+#last .forall{
+    width: 130px;
+    display: inline-block;
+}
+
+.forall{
+    padding-inline: 100px;
+    text-align:start;
+}
+
+i{
+    font-size: 30px;
+    padding-top: 15px;
+}
+
+i:hover{
+    font-size: 35px;
+    color: rgb(86, 95, 181);
+}
+
+
+.end{
+    background-color: #0a0a0a;
+    width: 100%;
+    height: 50px;
+}
+marquee{
+   padding: 15px;
+}
+
+a:hover{
+    padding-inline-start: 5px;
+    color: rgb(242, 238, 238);
+}
+
+li a{
+    padding-top: 10px;
+}
+
+.down li{
+    list-style-type: none;
+    padding: 5px;
+}
+
+li a{
+    text-decoration: none;
+}
+
+
+/* FQA */
+
+/* GENERAL STYLES FOR BOX AND OVERLAY */
+
+.box {
+    
+    justify-content: center;
+    align-items: center;
+    width: 410px;
+    height: 420px;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #bbb;
+    text-align: center;
+    position: relative;
+    left: -10px;
+  }
+  
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  /* SLIDE IN */
+  
+  .slide-in .overlay {
+    /* background-color: #6addaa; */
+    background-color: black;
+    padding: 10px;
+    color: #fff;
+    transform: translateX(-100%);
+    -webkit-transition: transform 0.5s ease-out;
+    -o-transition: transform 0.5s ease-out;
+    transition: transform 0.5s ease-out;
+    word-wrap: break-word;
+  }
+  
+  .slide-in .box:hover .overlay {
+    transform: translateX(0);
+  }
+  
+  /* SLIDE UP */
+  
+  .slide-up .overlay {
+    /* background-color: #3dcbe8; */
+    background-color: black;
+    color: #fff;
+    transform: translateY(100%);
+    -webkit-transition: transform 0.5s ease-out;
+    -o-transition: transform 0.5s ease-out;
+    transition: transform 0.5s ease-out;
+  }
+  
+  .slide-up .box:hover .overlay {
+    transform: translateY(0);
+  }
+  
+  /* SLIDE DOWN DELAY */
+  
+  .slide-down-delay .overlay {
+    /* background-color: #ee6f8c; */
+    background-color: black;
+    color: #fff;
+    transform: translateY(-100%);
+    -webkit-transition: transform 0.5s ease-out;
+    -o-transition: transform 0.5s ease-out;
+    transition: transform 0.5s ease-out;
+  }
+  
+  .slide-down-delay .box:hover .overlay {
+    transform: translateY(0);
+  }
+  
+  .slide-down-delay .overlay i {
+    transform: translateY(-80%);
+    opacity: 0;
+    -webkit-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+    -o-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+    transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  }
+  
+  .slide-down-delay .box:hover .overlay i {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  /* ROTATE */
+  
+  .rotate .overlay {
+    /* background-color: #6d94bb; */
+    background-color: black;
+    color: #fff;
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+    -webkit-transition: transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .rotate .box:hover .overlay {
+    transform: rotate(0deg);
+  }
+  /* SCALE */
+  
+  .scale .overlay {
+    background-color: #efcb5e;
+    background-color: black;
+    color: #fff;
+    transform: translateX(210%) scale(3);
+    -webkit-transition: transform 0.6s ease-in-out;
+    -o-transition: transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .scale .box:hover .overlay {
+    transform: translateX(0) scale(1);
+  }
+
+  .section-wrapper container-fluid{
+    display: inline-block;
+  }
+  
+  .slide-in four col{
+    margin: 20px;
+  }
+  /* End for FQA */
+
+  #myPic{
+    display: flex;
+  }
+  .card-display{
+    display: inline-block;
+  }
